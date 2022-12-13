@@ -3,10 +3,11 @@ import React from "react";
 import SignInForm from "../../components/sign-in-form/sign-in-form.component";
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
 
-import "./authentication.styles.scss";
+import { AuthenticationContainer } from "./authentication.styles";
 
 function Authentication() {
   /*
+  * google redirect signin implementation
   useEffect(() => {
     const foo = async () => {
       const response = await getRedirectResult(auth);
@@ -22,10 +23,10 @@ function Authentication() {
   */
 
   return (
-    <div className="authentication-container">
+    <AuthenticationContainer>
       <SignInForm />
       <SignUpForm />
-    </div>
+    </AuthenticationContainer>
   );
 }
 
